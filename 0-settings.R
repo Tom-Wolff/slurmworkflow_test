@@ -1,8 +1,10 @@
 # EDIT:
 #   Put here the shell lines needed to load R on the HPC.
 load_r_sh <- c(
-  ". /projects/epimodel/spack/share/spack/setup-env.sh",
-  "spack load r@4.2.1"
+  "module purge all",
+  "module load python-miniconda3",
+  "source activate /projects/p31728/pythonenvs/env1",
+  "module load R/4.2.3"
 )
 
 # EDIT:

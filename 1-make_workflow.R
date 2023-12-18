@@ -13,6 +13,7 @@ wf <- add_workflow_step(
   wf_summary = wf,
   step_tmpl = step_tmpl_bash_lines(
     bash_lines = c(
+      "module load git", # CHANGE HERE
       "git pull",
       load_r_sh,
       "Rscript -e \"renv::init(bare = TRUE, force = TRUE)\"",
